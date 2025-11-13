@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "a99654eb-3916-4bac-b188-8790e00798b1",
+		"name": "University Management Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49068925",
+		"_collection_link": "https://sankalp-alt-03-7319422.postman.co/workspace/Assignment-21~aa045e45-a7ff-4232-bb31-28b67d8646ac/collection/49068925-a99654eb-3916-4bac-b188-8790e00798b1?action=share&source=collection_link&creator=49068925"
+	},
+	"item": [
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Get All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/courses",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Courses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7000/courses",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"courses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Nov 2025 10:13:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Microservices Architecture\",\n        \"instructor\": \"Dr. Allen\",\n        \"credits\": 4\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Cloud Computing\",\n        \"instructor\": \"Prof. Smith\",\n        \"credits\": 3\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Data Structures\",\n        \"instructor\": \"Dr. Lee\",\n        \"credits\": 4\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Course by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/courses/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Course by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7000/courses/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"courses",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Nov 2025 10:14:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Microservices Architecture\",\n    \"instructor\": \"Dr. Allen\",\n    \"credits\": 4\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Enrollments",
+			"item": [
+				{
+					"name": "Get All Enrollments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7000/enrollments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"enrollments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Enrollments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7000/enrollments",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"enrollments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Nov 2025 10:15:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"studentId\": 101,\n        \"studentName\": \"Anita Sharma\",\n        \"courseId\": 2,\n        \"courseTitle\": \"Cloud Computing\"\n    },\n    {\n        \"id\": 2,\n        \"studentId\": 102,\n        \"studentName\": \"Student two\",\n        \"courseId\": 1,\n        \"courseTitle\": \"Microservices Architecture\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Enroll Student (POST)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studentId\": 101,\n    \"studentName\": \"Anita Sharma\",\n    \"courseId\": 2\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7000/enrollments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"enrollments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Enroll Student (POST)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"studentId\": 102,\n    \"studentName\": \"Student two\",\n    \"courseId\": 1\n}"
+								},
+								"url": {
+									"raw": "https://localhost:7000/enrollments",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7000",
+									"path": [
+										"enrollments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Nov 2025 10:15:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:5002/api/Enrollments?id=2"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"studentId\": 102,\n    \"studentName\": \"Student two\",\n    \"courseId\": 1,\n    \"courseTitle\": \"Microservices Architecture\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
